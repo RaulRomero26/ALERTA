@@ -5,7 +5,7 @@
 $Usuario = trim($_POST['User_Name']);
 $Password = trim($_POST['Password']);
 
-$conn = mysqli_connect('localhost', 'root', '');
+$conn = mysqli_connect('localhost', 'inteligencia', 'inteligencia');
 mysqli_select_db($conn, "alertas");
 
 $respuestasPositivas = Array();
