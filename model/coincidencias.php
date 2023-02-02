@@ -6,7 +6,7 @@ $ApMaterno = strtoupper(trim($_POST['ApMaterno']));
 //$Alias = strtoupper(trim($_POST['Alias']));
 $Banda = strtoupper(trim($_POST['Banda']));
 
-$conn = mysqli_connect('localhost', 'root', '');
+$conn = mysqli_connect('localhost', 'inteligencia', 'inteligencia');
 mysqli_select_db($conn, "alertas");
 
 $respuestasPositivas = Array();

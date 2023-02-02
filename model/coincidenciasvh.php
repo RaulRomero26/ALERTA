@@ -4,7 +4,7 @@ $Niv = trim($_POST['Niv']);
 $Placa = trim($_POST['Placa']);
 $Banda = trim($_POST['Banda']);
 
-$conn = mysqli_connect('localhost', 'root', '');
+$conn = mysqli_connect('localhost', 'inteligencia', 'inteligencia');
 mysqli_select_db($conn, "alertas");
 
 $respuestasPositivas2 = Array();
