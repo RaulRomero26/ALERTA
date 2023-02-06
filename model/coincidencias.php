@@ -51,9 +51,9 @@ while ($valores = mysqli_fetch_array($query))
 
     if((strcmp(strtolower($valores['ApellidoPaterno']),strtolower($ApPaterno))==0)&&(strcmp(strtolower($valores['ApellidoMaterno']),strtolower($ApMaterno))==0)){
       //echo 'if de insert \n';
-      $sql = "INSERT INTO coincidencias (Nombre,ApellidoPaterno,ApellidoMaterno,Alias,Banda,Delitos_Asociados,Folio,Captura,Observaciones,Foto,Id_referencia) 
+      $sql = "INSERT INTO coincidencias (Nombre,ApellidoPaterno,ApellidoMaterno,Alias,Banda,Delitos_Asociados,Folio,Captura,Observaciones,Foto,Id_referencia,Ficha,Remision) 
               VALUES ("."'".$valores['Nombre']."'".","."'".$valores['ApellidoPaterno']."'".",".
-              "'".$valores['ApellidoMaterno']."'".","."'".$valores['Alias']."'".","."'".$valores['Banda']."','".$valores['Delitos_Asociados']."','".$valores['Folio']."','".$valores['Captura']."','".$valores['Observaciones']."','".$valores['Foto']."','".$valores['Id']."');";
+              "'".$valores['ApellidoMaterno']."'".","."'".$valores['Alias']."'".","."'".$valores['Banda']."','".$valores['Delitos_Asociados']."','".$valores['Folio']."','".$valores['Captura']."','".$valores['Observaciones']."','".$valores['Foto']."','".$valores['Id']."','".$valores['Ficha']."','".$valores['Remision']."');";
       //echo 'genere cadena insert \n';
       $respuestasPositivas[$i]['Personas'] = $valores;
       if (mysqli_query($conn, $sql)) {
